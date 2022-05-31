@@ -7,6 +7,19 @@ For example, if you use a Terraform/Packer provisioner that calls a program inst
 you'll get miscellaneous failures
 saying that program doesn't exist (because snapd is updating it).
 
+## Installation
+If you are already using `pip`, then you can install the script via
+```shell
+pip install snapd-wait
+```
+
+If you don't have pip installed on the target system, don't bother.  The script has no external dependencies beyond
+python>=3.5, so you can just copy the script to `/usr/local/bin` and make it executable.
+```shell
+sudo cp snapd-wait to /usr/local/bin/
+sudo chmod a+x /usr/local/bin/snapd-wait
+```
+
 ## Usage
 ```shell
 $ snapd-wait --help
